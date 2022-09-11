@@ -1,6 +1,33 @@
 version = 1
 
 [[analyzers]]
+name = "secrets"
+enabled = true
+
+[[analyzers]]
+name = "docker"
+enabled = true
+
+[[analyzers]]
+name = "javascript"
+enabled = true
+
+  [analyzers.meta]
+  plugins = [
+    "react",
+    "vue",
+    "angular"
+  ]
+
+[[analyzers]]
+name = "go"
+enabled = true
+
+  [analyzers.meta]
+  import_root = "github.com/kadarius0719/deepsource_kubeapps"
+  dependencies_vendored = true
+
+[[analyzers]]
 name = "rust"
 enabled = true
 
